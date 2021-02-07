@@ -27,9 +27,9 @@ def Index():
 @app.route('/add_contact', methods=['POST'])
 def add_contact():
     if request.method == 'POST':
-        fullname = request.form['fullname']
-        phone = request.form['phone']
-        email = request.form['email']
+        fullname = request.form['Nom']
+        phone = request.form['Telèfon']
+        email = request.form['Sol·licitud']
         cursor = mysql.get_db().cursor()
         cursor.execute('INSERT INTO contacts (fullname, phone, email) VALUES (%s, %s, %s)',
         (fullname, phone, email))
